@@ -69,39 +69,7 @@ else:
     print(f"{numero} não é um número primo.")
 
 '''9. Calculadora Simples - Calculadora com menu interativo usando WHILE'''
-while True:
-    print("Calculadora Simples")
-    print("1. Soma")
-    print("2. Subtração")
-    print("3. Multiplicação")
-    print("4. Divisão")
-    print("5. Sair")
-    escolha = input("Escolha uma operação: ")
-    
-    if escolha == '5':
-        print("Encerrando a calculadora. Até mais!")
-        break
-    
-    num1 = float(input("Digite o primeiro número: "))
-    num2 = float(input("Digite o segundo número: "))
-    
-    if escolha == '1':
-        resultado = num1 + num2
-        print(f"Resultado: {num1} + {num2} = {resultado}")
-    elif escolha == '2':
-        resultado = num1 - num2
-        print(f"Resultado: {num1} - {num2} = {resultado}")
-    elif escolha == '3':
-        resultado = num1 * num2
-        print(f"Resultado: {num1} * {num2} = {resultado}")
-    elif escolha == '4':
-        if num2 != 0:
-            resultado = num1 / num2
-            print(f"Resultado: {num1} / {num2} = {resultado}")
-        else:
-            print("Erro: Divisão por zero não é permitida.")
-    else:
-        print("Opção inválida. Por favor, escolha uma operação válida.")
+
 '''Exercícios 11-25'''
 '''11. Contagem Regressiva com FOR - Contagem regressiva 10 até 1'''
 for i in range(10, 0, -1):
@@ -217,45 +185,3 @@ else:
     
 
 '''24. Banco com WHILE - Sistema bancário simples com saldo'''
-saldo = 1000.0
-while True:
-    print("Bem-vindo ao Banco Simples")
-    print("1. Ver saldo")
-    print("2. Depositar")
-    print("3. Sacar")
-    print("4. Sair")
-    escolha = input("Escolha uma opção: ")
-    
-    if escolha == '4':
-        print("Obrigado por usar o Banco Simples. Até mais!")
-        break
-    elif escolha == '1':
-        print(f"Seu saldo atual é: R${saldo:.2f}")
-    elif escolha == '2':
-        valor = float(input("Digite o valor para depositar: "))
-        if valor > 0:
-            saldo += valor
-            print(f"Depósito de R${valor:.2f} realizado com sucesso.")
-        else:
-            print("Valor inválido para depósito.")
-    elif escolha == '3':
-        valor = float(input("Digite o valor para sacar: "))
-        if 0 < valor <= saldo:
-            saldo -= valor
-            print(f"Saque de R${valor:.2f} realizado com sucesso.")
-        else:
-            print("Valor inválido para saque ou saldo insuficiente.")
-    else:
-        print("Opção inválida. Por favor, escolha uma opção válida.")
-        
-'''25. Contador Inteligente - Somatória com tratamento de erros'''
-soma = 0
-while True:
-    numero = input("Digite um número para somar (ou 'sair' para finalizar): ")
-    if numero.lower() == 'sair':
-        break
-    try:
-        soma += float(numero)
-    except ValueError:
-        print("Entrada inválida. Por favor, digite um número ou 'sair'.")
-print(f"A soma total é: {soma}")
